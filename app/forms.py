@@ -1,9 +1,9 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, FloatField, DateField, SubmitField
-from wtforms.validators import DataRequired, Email, EqualTo, Length
+from wtforms import StringField, PasswordField, FloatField, IntegerField, SubmitField
+from wtforms.validators import DataRequired, Email, EqualTo
 
 class RegistrationForm(FlaskForm):
-    name = StringField("Name", validators=[DataRequired(), Length(min=2, max=150)])
+    name = StringField("Name", validators=[DataRequired()])
     email = StringField("Email", validators=[DataRequired(), Email()])
     password = PasswordField("Password", validators=[DataRequired()])
     confirm_password = PasswordField("Confirm Password", validators=[DataRequired(), EqualTo("password")])
@@ -14,9 +14,11 @@ class LoginForm(FlaskForm):
     password = PasswordField("Password", validators=[DataRequired()])
     submit = SubmitField("Login")
 
-class OrderForm(FlaskForm):
-    client_name = StringField("Client Name", validators=[DataRequired()])
+class ProductForm(FlaskForm):
+    name = StringField("Product Name", validators=[DataRequired()])
     description = StringField("Description")
-    total_value = FloatField("Total Value", validators=[DataRequired()])
-    date = DateField("Date", validators=[DataRequired()])
+    category = StringField("Category")
+    price = FloatField("Price", validators=[DataRequired()])
+    quantity = IntegerField("Quantity", validators=[DataRequired()])
+    low_stock_threshold = IntegerField("Low Stock Threshold", validators=[DataRequired()])
     submit = SubmitField("Save")
