@@ -1,32 +1,26 @@
 1. Introdução ao Projeto
-Breve explicação sobre o objetivo do sistema: um aplicativo web para gerenciar pedidos de clientes.
-Principais funcionalidades: cadastro, edição, visualização e exclusão de pedidos.
+Objetivo do sistema: permitir o controle e monitoramento do estoque de produtos de uma loja.
+Principais funcionalidades: adicionar, editar, excluir e consultar produtos em estoque.
 2. Tecnologias Utilizadas
-Flask: framework de backend para criar a lógica do aplicativo.
-SQLite: banco de dados para armazenar informações de usuários e pedidos.
-HTML, CSS, Bootstrap: para criar uma interface responsiva e amigável.
-Flask-Login: para autenticação e gerenciamento de sessões de usuário.
-Git e Render: controle de versão e deploy do aplicativo.
+Flask: framework backend para gerenciar a lógica do sistema.
+SQLite: banco de dados para armazenar informações de produtos e usuários.
+HTML, CSS, Bootstrap: para criar uma interface de usuário responsiva e amigável.
+Flask-Login: para autenticação e restrição de acesso ao sistema.
+Git e Render: controle de versão e deploy online da aplicação.
 3. Funcionalidades do Sistema
-Cadastro e Login de Usuários: permite o registro de novos usuários e controle de acesso.
-Gerenciamento de Pedidos (CRUD):
-Exibir lista de pedidos.
-Adicionar um novo pedido.
-Editar pedidos existentes.
-Excluir pedidos.
-Estilização Responsiva: interface construída com Bootstrap para uma experiência consistente em dispositivos móveis e desktop.
-4. Estrutura do Projeto
-Organização dos arquivos e diretórios, com destaque para os principais módulos:
-models.py: modelos de dados para Usuários e Pedidos.
-forms.py: formulários de entrada para usuários e pedidos.
-routes.py: rotas para navegação e execução das funcionalidades.
-Templates HTML: páginas para login, cadastro, listagem e formulários de pedido.
-5. Fluxo de Funcionalidades
-Explicação do fluxo de cadastro e login de usuários.
-Demonstração do CRUD de pedidos (adicionar, editar, excluir e listar).
+Cadastro e Autenticação de Usuários: controle de acesso para garantir que apenas funcionários autorizados possam gerenciar o estoque.
+Painel de Controle de Estoque:
+Interface para visualização e gerenciamento de produtos em estoque.
+Cadastro de Produtos: formulário para adicionar novos produtos com detalhes como nome, descrição, categoria, preço e quantidade.
+Edição e Exclusão de Produtos: funcionalidades para atualizar informações e remover produtos, com confirmações para segurança.
+Consulta de Produtos: pesquisa e filtro de produtos por nome, categoria e outros critérios.
+4. Funcionalidades Avançadas
+Alertas de Estoque Baixo: notificação quando a quantidade de um produto atinge um nível crítico.
+Histórico de Movimentação de Estoque: registro de operações no estoque (adições, edições, exclusões), facilitando auditorias e análises.
+5. Segurança e Controle de Acesso
+Implementação de restrições de acesso utilizando Flask-Login para garantir que apenas usuários autenticados tenham permissão para gerenciar o estoque.
 6. Deploy e Controle de Versão
-Git: uso do controle de versão para registrar o progresso do desenvolvimento.
+Git: uso de controle de versão para gerenciar o desenvolvimento.
+Render: deploy da aplicação, permitindo que o sistema esteja disponível para acesso online.
 Render: deploy da aplicação na plataforma, permitindo acesso online ao sistema.
-7. Conclusão e Futuras Melhorias
-Resumo das funcionalidades entregues.
-Sugestões de melhorias, como filtros de pesquisa de pedidos e envio de notificações.
+
